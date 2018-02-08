@@ -4,11 +4,21 @@
   "main": "index.js",
   "license": "MIT",
   "scripts": {
-    "start": "node ."
+    "start": "node .",
+    "seed": "node db/seed.js"
   },
   "dependencies": {
     "body-parser": "^1.18.2",
     "express": "^4.16.2",
-    "mongoose": "^5.0.3"
+    "jsonwebtoken": "^8.1.1",
+    "mongoose": "^5.0.3",
+    "nodemon": "^1.14.12",
+    "passport": "^0.4.0",
+    "passport-jwt": "^3.0.1",
+    "passport-local": "^1.0.0",
+    "passport-local-mongoose": "^4.5.0"
+  },
+  "devDependencies": {
+    "superagent": "^3.8.2"
   }
 }
