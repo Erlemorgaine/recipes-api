@@ -18,7 +18,6 @@ const tokenStrategy = new JwtStrategy(jwtOptions, (jwtPayload, done) => {
     .catch((err) => done(err, false))
 })
 
-
 passport.use(User.createStrategy())
 passport.serializeUser(User.serializeUser())
 passport.deserializeUser(User.deserializeUser())
