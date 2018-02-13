@@ -2,7 +2,7 @@ const router = require('express').Router()
 const { User } = require('../models')
 const passport = require('../config/auth')
 
-router.get('/users/dino', passport.authorize('jwt', { session: false }), (req, res, next) => {
+router.get('/users/me', passport.authorize('jwt', { session: false }), (req, res, next) => {
   if(!req.account) {
     const error = new Error('Unauthorized')
     error.status = 401

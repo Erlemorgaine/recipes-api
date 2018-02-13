@@ -21,5 +21,6 @@ const tokenStrategy = new JwtStrategy(jwtOptions, (jwtPayload, done) => {
 passport.use(User.createStrategy())
 passport.serializeUser(User.serializeUser())
 passport.deserializeUser(User.deserializeUser())
+passport.use(tokenStrategy)
 
 module.exports = passport
